@@ -4,10 +4,10 @@
 
 ## Features
 
-- 🏰 Chat with **Good Sir Kyletton** by mentioning (`@`) the bot.
-- 🤖 AI responses generated using **Gemma 3.5 27B** hosted on **Ollama**.
-- 🪙 `/coin` — Flip a coin and let fate decide.
-- 🐈 `/cat` — Find out how much of a cat you are (in %).
+- Chat with **Good Sir Kyletton** by mentioning (`@`) the bot.
+- AI responses generated using **Gemma 3.5 27B** hosted on **Ollama**.
+- `/coin` — Flip a coin and let fate decide.
+- `/cat` — Find out how much of a cat you are (in %).
 
 ## Requirements
 

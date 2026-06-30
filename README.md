@@ -126,10 +126,14 @@ The bot will reply in its signature medieval style.
 | `/reload` | Reloads a command. |
 | `/ping` | To test out the connection. |
 
+## Version
 
+This is an initail test fire of sorts. More commands and enhancments are coming soon. 
 
 ## Notes
 
 - Keep your `.env` file private and add it to `.gitignore`.
 - Never commit your bot token or API keys to Git.
 - If your Discord bot token is ever exposed, regenerate it immediately from the Discord Developer Portal.
+
+

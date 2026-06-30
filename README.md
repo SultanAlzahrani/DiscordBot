@@ -1,12 +1,20 @@
-# Discord Bot
+# Good Sir Kyletton
 
-A Discord bot built with Node.js.
+**Good Sir Kyletton** is a Discord bot built with Node.js that speaks in a medieval, Old English-inspired style. Mention the bot in any channel to chat with it through an AI model powered by **Gemma 3.5 27B** hosted on **Ollama**.
+
+## Features
+
+- 🏰 Chat with **Good Sir Kyletton** by mentioning (`@`) the bot.
+- 🤖 AI responses generated using **Gemma 3.5 27B** hosted on **Ollama**.
+- 🪙 `/coin` — Flip a coin and let fate decide.
+- 🐈 `/cat` — Find out how much of a cat you are (in %).
 
 ## Requirements
 
 - Node.js 18+ (LTS recommended)
 - npm
-- A Discord application and bot token
+- A Discord bot application
+- Access to an Ollama instance running **Gemma 3.5 27B**
 
 ## Installation
 
@@ -34,7 +42,7 @@ OLLAMA_API_KEY=your_ollama_api_key
 
 ## Running the Bot
 
-Start the bot with:
+Start the bot locally:
 
 ```bash
 node index.js
@@ -42,7 +50,7 @@ node index.js
 
 ## Running with PM2 (Recommended)
 
-Install PM2 globally:
+Install PM2:
 
 ```bash
 npm install -g pm2
@@ -51,35 +59,25 @@ npm install -g pm2
 Start the bot:
 
 ```bash
-pm2 start index.js --name discord-bot
+pm2 start index.js --name good-sir-kyletton
 ```
 
-View logs:
+Useful commands:
 
 ```bash
-pm2 logs discord-bot
+pm2 logs good-sir-kyletton
+pm2 restart good-sir-kyletton
+pm2 stop good-sir-kyletton
 ```
 
-Restart:
+To automatically start the bot after a VPS reboot:
 
 ```bash
-pm2 restart discord-bot
-```
-
-Stop:
-
-```bash
-pm2 stop discord-bot
-```
-
-Save the PM2 process so it starts automatically after a reboot:
-
-```bash
-pm2 save
 pm2 startup
+pm2 save
 ```
 
-Follow the command that `pm2 startup` prints to complete the setup.
+Run the command that `pm2 startup` prints to finish the setup.
 
 ## Project Structure
 
@@ -87,7 +85,7 @@ Follow the command that `pm2 startup` prints to complete the setup.
 .
 ├── commands/
 ├── events/
-├── utility/
+├── uitility/
 ├── LLM/
 ├── index.js
 ├── package.json
@@ -101,11 +99,32 @@ Follow the command that `pm2 startup` prints to complete the setup.
 |----------|-------------|
 | `TOKEN` | Discord bot token |
 | `CLIENT_ID` | Discord application client ID |
-| `GUILD_ID` | Discord server ID (used for guild commands) |
-| `OLLAMA_API_KEY` | API key used for Ollama requests |
+| `GUILD_ID` | Discord server ID (used for guild-specific slash commands) |
+| `OLLAMA_API_KEY` | API key used to access the Ollama-hosted model |
+
+## Usage
+
+### Chatting
+
+Mention **Good Sir Kyletton** in any message to start a conversation.
+
+Example:
+
+```
+@Good Sir Kyletton What thinkest thou of pineapple upon pizza?
+```
+
+The bot will reply in its signature medieval style.
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `/coin` | Flips a coin and returns Heads or Tails. |
+| `/cat` | Calculates how much of a cat you are and returns a random percentage. |
 
 ## Notes
 
-- Never commit your `.env` file.
-- Add `.env` to your `.gitignore`.
-- If your bot token is ever exposed, regenerate it immediately from the Discord Developer Portal.
+- Keep your `.env` file private and add it to `.gitignore`.
+- Never commit your bot token or API keys to Git.
+- If your Discord bot token is ever exposed, regenerate it immediately from the Discord Developer Portal.

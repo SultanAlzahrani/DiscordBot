@@ -122,6 +122,11 @@ The bot will reply in its signature medieval style.
 |---------|-------------|
 | `/coin` | Flips a coin and returns Heads or Tails. |
 | `/cat` | Calculates how much of a cat you are and returns a random percentage. |
+| `/user` | Provides information about the user. |
+| `/reload` | Reloads a command. |
+| `/ping` | To test out the connection. |
+
+
 
 ## Notes
 

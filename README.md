@@ -128,7 +128,7 @@ The bot will reply in its signature medieval style.
 
 ## Version
 
-This is an initail test fire of sorts. More commands and enhancments are coming soon. 
+This is an initial test fire of sorts. More commands and enhancments are coming soon. 
 
 ## Notes
 
